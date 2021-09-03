@@ -28,12 +28,12 @@ export class HttpService {
   }
 
   getGameDetails(id: string): Observable<Game> {
-    const gameInfoRequest = this.http.get(`${env.BASE_URL}/${id}?key=1b8799dc37254559b5bd2e696ce2a713`);
+    const gameInfoRequest = this.http.get(`${env.BASE_URL}/${id}`);
     const gameTrailersRequest = this.http.get(
-      `${env.BASE_URL}/${id}/movies?key=1b8799dc37254559b5bd2e696ce2a713`
+      `${env.BASE_URL}/${id}/movies`
     );
     const gameScreenshotsRequest = this.http.get(
-      `${env.BASE_URL}/${id}/screenshots?key=1b8799dc37254559b5bd2e696ce2a713`
+      `${env.BASE_URL}/${id}/screenshots`
     );
 
     return forkJoin({

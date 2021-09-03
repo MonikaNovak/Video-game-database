@@ -6,14 +6,14 @@ import { Observable } from "rxjs";
 
 @Injectable()
 export class HttpHeadersInterceptor implements HttpInterceptor {
-    constructor() {}
+    constructor() { }
 
     intercept(
         req: HttpRequest<any>,
         next: HttpHandler
     ): Observable<HttpEvent<any>> {
         req = req.clone({
-            url: 'https://api.rawg.io/api/games',
+            url: req.url,
             setParams: {
                 key: '1b8799dc37254559b5bd2e696ce2a713',
             }
