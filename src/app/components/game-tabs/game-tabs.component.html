@@ -1,6 +1,7 @@
 <div class="game-tabs">
     <mat-tab-group mat-align-tabs="start" backgroundColor="primary">
         <mat-tab label="About">
+            <div class="game-tab-about">
             <p *ngIf="game.parent_platforms?.length" class="game-tabs-par">
                 Platforms:
                 <span *ngFor="let game of game.parent_platforms; let last = last"
@@ -29,6 +30,7 @@
                 </span>
             </ng-container>
             </p>
+        </div>
         </mat-tab>
         <mat-tab label="Screenshots" *ngIf="game.screenshots?.length">
             <img 
