@@ -6,9 +6,9 @@
         justify-content: center;
     }
     .mat-tab-group {
-        :link {
-            color: rgb(0,176,213);
-        };
+        :any-link {
+            color:rgb(0, 134, 161);
+        }
     }
 
 }
